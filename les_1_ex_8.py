@@ -6,6 +6,8 @@ a = int(input("a = "))
 b = int(input("b = "))
 c = int(input("c = "))
 
+# -------------------------------------------
+print("\nРасчёт среднего по первому методу")
 if a > b and a > c and b > c:
     print(f'{b} - среднее число')
 elif a > b and a > c and b < c:
@@ -18,3 +20,12 @@ elif a < b and a < c and b > c:
     print(f'{c} - среднее число')
 elif a < b and a < c and b < c:
     print(f'{b} - среднее число')
+
+# -------------------------------------------
+print("\nРасчёт среднего по второму методу")
+if b < a < c or c < a < b:
+    print(f'{a} - среднее число')
+elif a < b < c or c < b < a:
+    print(f'{b} - среднее число')
+else:
+    print(f'{c} - среднее число')
