@@ -8,7 +8,7 @@ print("Игра 'Угадай число'")
 attempt = 0
 n = random.randint(0, 100)
 
-while attempt <= 10:
+while attempt < 10:
     number = int(input("Введите предполагаемое число: "))
     if number < n:
         print("Слишком мало")
