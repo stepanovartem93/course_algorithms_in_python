@@ -13,6 +13,7 @@ while i < len(array):
         index = i
     i += 1
 
+print(array)
 if index != -1:
     print(f'Максимальное отрицательное число {array[index]}'
           f', находится в ячейке {index}.')

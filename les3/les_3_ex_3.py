@@ -15,5 +15,6 @@ for i in range(len(array)):
     elif array[i] > array[ix_max]:
         ix_max = i
 
-array[ix_min],array[ix_max] = array[ix_max], array[ix_min]
+array[ix_min], array[ix_max] = array[ix_max], array[ix_min]
 print(f'Изменённый массив:\n\t{array}')
+print(f'\nМинимальный элемент лежит в ячейке: {ix_min}, максимальный элемент в: {ix_max}')

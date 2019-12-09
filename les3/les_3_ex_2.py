@@ -8,7 +8,7 @@ array = [random.randint(0, 100) for _ in range(size)]
 index_list = []
 
 
-for i in range(len(array)):
+for i in range(len(array)): #пройти столько раз, сколько элементов в массиве
     if array[i] % 2 == 0:
         index_list.append(i)
 
