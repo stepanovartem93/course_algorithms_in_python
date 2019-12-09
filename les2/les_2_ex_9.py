@@ -9,6 +9,7 @@ max_sum = 0
 max_numb = 0
 max = 0
 while n > 0:
+    max_numb = n
     max_sum += n % 10
     n //= 10
 
