@@ -59,68 +59,36 @@ def find_min_max_2(size):
 
 
 
-
-
-# Есть предположения что сделаны неверные расчёты
-# cProfile.run('find_min_max_1(10)')
-# 60 function calls in 0.000 seconds
-
-# python -m timeit -n 10 -s "import task_1" "task_1.find_min_max_1(10)"
-# 10 loops, best of 5: 258 usec per loop
-
-# python -m timeit -n 100 -s "import task_1" "task_1.find_min_max_1(10)"
-# 100 loops, best of 5: 547 usec per loop
-
-# python -m timeit -n 1000 -s "import task_1" "task_1.find_min_max_1(10)"
-# 1000 loops, best of 5: 404 usec per loop
-
-# python -m timeit -n 10000 -s "import task_1" "task_1.find_min_max_1(10)"
-# 10000 loops, best of 5: 442 usec per loop
-
-#=========================================================================
-# cProfile.run('find_min_max_2(10)')
-# 66 function calls in 0.001 seconds
-
-# python -m timeit -n 10 -s "import task_1" "task_1.find_min_max_2(10)"
-# 10 loops, best of 5: 210 usec per loop
-
-# python -m timeit -n 100 -s "import task_1" "task_1.find_min_max_2(10)"
-# 100 loops, best of 5: 237 usec per loop
-
-# python -m timeit -n 1000 -s "import task_1" "task_1.find_min_max_2(10)"
-# 1000 loops, best of 5: 424 usec per loop
-
-# python -m timeit -n 10000 -s "import task_1" "task_1.find_min_max_2(10)"
-# 10000 loops, best of 5: 434 usec per loop
-
-#=========================================================================
-# cProfile.run('find_min_max_1(100)')
-# 534 function calls in 0.001 seconds
-
-# cProfile.run('find_min_max_2(100)')
-# 550 function calls in 0.000 seconds
-
 # cProfile.run('find_min_max_1(1000)')
-# 5260 function calls in 0.007 seconds
+# 5283 function calls in 0.005 seconds
+# ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+#         1    0.000    0.000    0.005    0.005 <string>:1(<module>)
+#      1000    0.001    0.000    0.001    0.000 random.py:174(randrange)
+#      1000    0.000    0.000    0.002    0.000 random.py:218(randint)
+#      1000    0.001    0.000    0.001    0.000 random.py:224(_randbelow)
+#         1    0.000    0.000    0.002    0.002 task_1.py:10(<listcomp>)
+#         1    0.001    0.001    0.005    0.005 task_1.py:7(find_min_max_1)
+#         1    0.000    0.000    0.005    0.005 {built-in method builtins.exec}
+#         1    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+#         3    0.002    0.001    0.002    0.001 {built-in method builtins.print}
+#      1000    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
+#         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+#      1274    0.000    0.000    0.000    0.000 {method 'getrandbits' of '_random.Random' objects}
 
 # cProfile.run('find_min_max_2(1000)')
-# 5308 function calls in 0.006 seconds
-
-# cProfile.run('find_min_max_1(10000)')
-# 52664 function calls in 0.047 seconds
-
-# cProfile.run('find_min_max_2(10000)')
-# 52682 function calls in 0.042 seconds
-
-# cProfile.run('find_min_max_1(100000)')
-# 527216 function calls in 0.402 seconds
-
-# cProfile.run('find_min_max_2(100000)')
-# 527224 function calls in 0.294 seconds
-
-# cProfile.run('find_min_max_1(1000000)')
-# 5273063 function calls in 3.117 seconds
-
-# cProfile.run('find_min_max_2(1000000)')
-# 5273093 function calls in 2.749 seconds
-
+# 5272 function calls in 0.008 seconds
+# ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+#         1    0.000    0.000    0.008    0.008 <string>:1(<module>)
+#      1000    0.001    0.000    0.002    0.000 random.py:174(randrange)
+#      1000    0.000    0.000    0.003    0.000 random.py:218(randint)
+#      1000    0.001    0.000    0.001    0.000 random.py:224(_randbelow)
+#         1    0.000    0.000    0.008    0.008 task_1.py:24(find_min_max_2)
+#         1    0.000    0.000    0.003    0.003 task_1.py:25(<listcomp>)
+#         1    0.000    0.000    0.008    0.008 {built-in method builtins.exec}
+#         1    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+#         1    0.000    0.000    0.000    0.000 {built-in method builtins.min}
+#         3    0.004    0.001    0.004    0.001 {built-in method builtins.print}
+#      1000    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
+#         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+#      1260    0.000    0.000    0.000    0.000 {method 'getrandbits' of '_random.Random' objects}
+#         2    0.000    0.000    0.000    0.000 {method 'index' of 'list' objects}
