@@ -10,6 +10,7 @@ ix_min = 0
 ix_max = 0
 
 print(f'Исходный массив: {array};')
+
 for i in range(1, len(array)):
     if array[i] < array[ix_min]:
         ix_min = i
