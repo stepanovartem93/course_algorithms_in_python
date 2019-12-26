@@ -20,10 +20,11 @@ def dijkstra(graph, start): #на входе принимает граф и на
 
     cost[start] = 0
     min_cost = 0 #переменная показывает движемся ли по графу или нет
+    vertexes = [] #хранит список вершин на пути
 
     while min_cost < float('inf'):
 
-        is_visited[start] = True #отметим стартую вершину как посещённую
+        is_visited[start] = True #отметим стартовую вершину как посещённую
 
         for i, vertex in enumerate(graph[start]): #проходим по то строке таблицы смежности, где хранится значение start
             if vertex != 0 and not is_visited[i]:
@@ -32,6 +33,7 @@ def dijkstra(graph, start): #на входе принимает граф и на
                 if cost[i] > vertex + cost[start]:
                     cost[i] = vertex + cost[start] #записываем новое более короткое расстояние
                     parent[i] = start #указываем какая вершина является родительской
+                vertexes.append(parent[i]) #добавляем в список пройденные вершины
 
         min_cost = float('inf')
         for i in range(length):
@@ -39,7 +41,7 @@ def dijkstra(graph, start): #на входе принимает граф и на
                 min_cost = cost[i]
                 start = i
 
-    return cost
+    return cost, set(vertexes)
 
 
 s = int(input("От какой вершины идти: "))
